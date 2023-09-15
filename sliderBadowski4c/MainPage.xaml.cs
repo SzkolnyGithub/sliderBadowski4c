@@ -12,6 +12,11 @@ public partial class MainPage : ContentPage
     private void podajEmail(object sender, EventArgs e)
     {
         string Email = email.Text;
+        if(Email == null)
+        {
+            wynik.Text = "Wprowadź email";
+            return;
+        }
         if (!Email.Contains("@"))
         {
             wynik.Text = "Błędny email";
@@ -19,6 +24,16 @@ public partial class MainPage : ContentPage
         }
         string Haslo = haslo.Text;
         string HasloPow = hasloPow.Text;
+        if(Haslo == null || HasloPow == null)
+        {
+            if(Haslo == null && HasloPow == null)
+            {
+                wynik.Text = "Podaj hasło";
+                return;
+            }
+            wynik.Text = "Podaj hasło";
+            return;
+        }
         if (Haslo == HasloPow)
         {
             wynik.Text = $"Witaj {Email}";
