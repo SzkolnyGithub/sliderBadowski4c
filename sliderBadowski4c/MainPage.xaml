@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="sliderBadowski4c.MainPage">
+
+    <Shell.TitleView>
+        <Label 
+            Text="loginAppAS" 
+            TextColor="white"
+            FontSize="Medium"
+            VerticalTextAlignment="Center"
+            VerticalOptions="CenterAndExpand"
+            />
+    </Shell.TitleView>
+        
+    <ScrollView>
+        <VerticalStackLayout
+            VerticalOptions="Start">
+
+            <Label 
+                Text="Rejestruj konto"
+                FontSize="38"
+                BackgroundColor="Teal"
+                TextColor="White"
+                HeightRequest="50" />
+
+            <Label 
+                Text="Podaj e-mail: "
+                FontSize="20"
+                Padding="2"
+                TextColor="Grey" />
+
+            <Entry 
+                x:Name="email" 
+                Keyboard="Email" 
+                FontSize="15" />
+
+            <Label 
+                Text="Podaj hasło: "
+                FontSize="20"
+                Padding="2"
+                TextColor="Grey" />
+
+            <Entry 
+                x:Name="haslo"
+                IsPassword="True"
+                FontSize="15" />
+
+            <Label 
+                Text="Powtórz hasło: "
+                FontSize="20"
+                Padding="2"
+                TextColor="Grey" />
+
+            <Entry 
+                x:Name="hasloPow"
+                IsPassword="True"
+                FontSize="15" />
+
+            <Button 
+                Text="Zatwierdź"
+                Clicked="podajEmail" 
+                WidthRequest="120"
+                FontSize="20"/>
+
+            <Label 
+                x:Name="wynik"
+                Text="Wynik funkcji"
+                HorizontalTextAlignment="Center"
+                Padding="10" 
+                FontSize="20" />
+
+            <Slider 
+                x:Name="suwakTu"
+                ValueChanged="pokaz" 
+                Maximum="1000" />
+
+            <Label 
+                Text="suwak tu bedzie"
+                x:Name="wynikSuwak" />
+
+            <Image Source="index.png" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
